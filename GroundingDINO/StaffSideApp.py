@@ -11,7 +11,7 @@ from pymongo.server_api import ServerApi
 # Create a new client and connect to the server
 DB_NAME = 'object_detection'
 COL_NAME = 'First-try'
-MONGO_URI = "mongodb+srv://pandharkardeep35:7762Q0QmsBVhYqLF@deep.pfmz7xz.mongodb.net/"
+MONGO_URI = "your_uri"
 client = MongoClient(MONGO_URI)
 db = client[DB_NAME]
 collection = db[COL_NAME]
@@ -25,14 +25,14 @@ image_file_minibar = st.file_uploader("Upload image of Minibar", type = ["jpg","
 # Model loading
 if (image_file_towel or image_file_minibar) and room_number is not None:
     # Define model paths
-    WEIGHTS_PATH = "D:/Datahackproj/ObjectDetectionProj/Videos/groundingdino_swint_ogc.pth"
-    CONFIG_PATH = "D:/Datahackproj/ObjectDetectionProj/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"
+    WEIGHTS_PATH = "Your Path to groundingdino_swint_ogc.pth"
+    CONFIG_PATH = "Your Path toGroundingDINO_SwinT_OGC.py"
 
     # Load model
     model = load_model(CONFIG_PATH, WEIGHTS_PATH)
 
     # Image path
-    IMAGE_PATH = 'D:/Datahackproj/ObjectDetectionProj/Videos/Towel.jpg'
+    
 
     # Define parameters
     
