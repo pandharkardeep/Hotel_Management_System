@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Hotel</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Room Number</th>
+                <th>Number of Towels</th>
+                <th>Number of Mini Bar Items</th>
+       
+            </tr>
+        </thead>
+        <tbody>
+            {% for room in online_users %}
+            <tr>
+                <td>{{ room.Room_Number }}</td>
+                <td>{{ room.num_towels }}</td>
+                <td>{{ room.num_miniBarObjects}}</td>
+      
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
